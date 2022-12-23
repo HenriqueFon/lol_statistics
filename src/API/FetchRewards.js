@@ -6,7 +6,7 @@ export const FetchRewards = async (state, name) => {
     
     const res = await axios.get(url);
     
-    if(res != 200) {
+    if(res.status !== 200) {
         console.log("Erro ao chamar a API");
         return [];
     }
