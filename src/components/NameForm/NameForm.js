@@ -1,20 +1,32 @@
 import "./NameForm";
-import { useState } from "react";
-import { UseFetch } from "../../hook/UseFetch";
+import { useState, useEffect } from "react";
+import { FetchRewards } from "../../API/FetchRewards";
 
 const NameForm = () => {
-
-    const [summonerName,setSummonerName] = useState();
+    
+    const [summonerName, setSummonerName] = useState();
     const [data, setData] = useState();
+    const [state, setState] = useState();
+    const [ready, setReady] = useState(false);
+
+    const getData = async (state, name) => {
+        let res = await FetchRewards(state, name);
+        setData(res);
+    }
 
     const handleChange = (event) => {
-       setSummonerName(event.target.value);
+        setSummonerName(event.target.value);
     }
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-        setData(await UseFetch(summonerName));
+        setState('encrypt');
+        setReady(true);
     }
+    
+    useEffect(() => {
+        if(ready) getData(state, summonerName)
+    },[ready])
 
     return(
         <div>
