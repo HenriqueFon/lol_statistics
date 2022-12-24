@@ -1,4 +1,18 @@
 .navbar {
-    
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
     background-color: red;
+    height: 5vh;
+    padding-top: 2vh;
+}
+
+.link {
+    text-decoration: none;
+    color:white;
+    font-size: 2vh;
+}
+
+.link:hover {
+
 }

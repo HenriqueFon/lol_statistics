@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import ListaCampeoes from './pages/ListaCampeoes/ListaCampeoes';
 import Classificacao from './pages/Classificacao/Classificacao';
+import PartidasProfissionais from './pages/PartidasProfissionais/PartidasProfissionais';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path = "/" element = {<Home />} />
             <Route path = "/champions" element = {<ListaCampeoes/>} />
             <Route path = "/classification" element = {<Classificacao/>} />
+            <Route path = "/professional" element = {<PartidasProfissionais/>} />
         </Routes>
       </BrowserRouter>
     </div>
