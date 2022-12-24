@@ -10,7 +10,7 @@ const PlayerProfile = ({ playerData }) => {
     
 
     return (
-        <div>
+        <div className = "summoner_column">
             <h1>{name}</h1>
         </div>
     );
