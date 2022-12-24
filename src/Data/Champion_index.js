@@ -1,6 +1,6 @@
 Champion_index = (id) => {
-    const championsArray = {
-        "66": "Aatrox",
+    const championsIndex = {
+        "266": "Aatrox",
         "103": "Ahri",
         "84": "Akali",
         "166": "Akshan",
@@ -12,7 +12,7 @@ Champion_index = (id) => {
         "22": "Ashe",
         "136": "Aurelion Sol",
         "268": "Azir",
-        "432": "Bard",
+        "432": "Bardo",
         "200": "Bel'Veth",
         "53": "Blitzcrank",
         "63": "Brand",
@@ -163,7 +163,7 @@ Champion_index = (id) => {
         "142": "Zoe",
         "143": "Zyra"
     }
-    return championsArray[id];
+    return championsIndex[id];
 }
 
 export default Champion_index;

@@ -6,7 +6,6 @@ import Home from './pages/Home/Home';
 function App() {
   return (
     <div className="App">
-      <h1>React router</h1>
       <BrowserRouter>
         <Navbar />
         <Routes>
