@@ -20,7 +20,7 @@ export const Champion_index = (id) => {
         "51": "Caitlyn",
         "164": "Camille",
         "69": "Cassiopeia",
-        "31": "Cho'Gath",
+        "31": "Chogath",
         "42": "Corki",
         "122": "Darius",
         "131": "Diana",
