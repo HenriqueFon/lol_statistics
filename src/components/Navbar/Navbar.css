@@ -2,17 +2,17 @@
     display:flex;
     flex-direction: row;
     justify-content:space-around;
-    background-color: red;
-    height: 5vh;
-    padding-top: 2vh;
+    align-items: center;
+    background-color: #080221;
+    height: 7vh;
 }
 
 .link {
     text-decoration: none;
-    color:white;
+    color:#FA1505;
     font-size: 2vh;
 }
 
 .link:hover {
-
+    background-color: blue;
 }

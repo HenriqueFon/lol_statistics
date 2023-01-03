@@ -1,9 +1,8 @@
 import axios from "axios";
 import Data from "../Data/Data";
 
-export const FetchRewards = async (state, name) => {
+export const FetchRewardsAxios = async (state, name) => {
     let url = Data(state, name);
-    
     const res = await axios.get(url);
     
     if(res.status !== 200) {

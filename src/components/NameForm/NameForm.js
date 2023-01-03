@@ -28,7 +28,7 @@ const NameForm = () => {
     useEffect(() => {
         if(ready) getDataAsync(state, summonerName);
     },[ready])
-
+    
     return(
         <div>
             <div>
