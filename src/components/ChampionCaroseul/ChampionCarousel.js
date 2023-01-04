@@ -52,7 +52,7 @@ const ChampionCarousel = () => {
     },[]);
 
     return (
-       <motion.div ref = {carousel} className = 'carousel' whileTap = {{cursor:"grabbing"}}>
+       <motion.div  className = 'carousel' whileTap = {{cursor:"grabbing"}}>
             <motion.div className = 'inner'
                 drag = "x"
                 dragConstraints = {{right: 0, left: -width}}

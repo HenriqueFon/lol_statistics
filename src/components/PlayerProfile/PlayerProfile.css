@@ -3,3 +3,10 @@
     flex-direction: column;
     background-color: red;
 }
+
+.icon img{
+    margin-top: 5vh;
+    width: 10%;
+    height: 10%;
+    border-radius: 100px;
+}

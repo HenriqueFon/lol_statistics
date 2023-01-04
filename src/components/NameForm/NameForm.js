@@ -1,4 +1,4 @@
-import "./NameForm";
+import "./NameForm.css";
 import { useState, useEffect } from "react";
 import { getData } from "../../API/getData";
 import PlayerProfile from "../PlayerProfile/PlayerProfile";
@@ -31,9 +31,10 @@ const NameForm = () => {
     
     return(
         <div>
-            <div>
+            <div className = 'NameForm'>
                 <form onSubmit = {handleSubmit}>
                     <input type = "text"
+                        placeholder = "Digite o nome do invocador"
                         name = "summoner_name"
                         onChange = {handleChange}
                     />

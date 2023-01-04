@@ -1,6 +1,5 @@
-import "./PlayerProfile";
-import { useEffect } from "react";
-import { getData } from "../../API/getData";
+import "./PlayerProfile.css";
+import Data from "../../Data/Data";
 
 const PlayerProfile = ({ playerData }) => {
 
@@ -8,7 +7,13 @@ const PlayerProfile = ({ playerData }) => {
     
     return (
         <div className = "summoner_column">
-            <h1>{name}</h1>
+            <div className = "icon">
+                <img src = {`${Data('summoner_Icon', '', '', '', '')}${profileIconId}.png`} alt = 'Profile_icon'></img>
+            </div>
+            <div>
+                <h1>{name}</h1>
+            </div>
+            <p>Level:{summonerLevel}</p>
         </div>
     );
 }
