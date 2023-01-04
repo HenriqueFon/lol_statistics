@@ -1,12 +1,36 @@
+.summoner_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .summoner_column {
     display:flex;
     flex-direction: column;
     background-color: red;
+    width: 50vh;
+    border-radius: 25px;
+}
+
+.summoner_column h2 {
+    display:flex;
+    justify-content: center;
+    background-color: black;
+    color:white;
+    border-radius: 25px;
+    font-size:1.5vh;
 }
 
 .icon img{
     margin-top: 5vh;
-    width: 10%;
-    height: 10%;
+    width: 25%;
+    height: 25%;
     border-radius: 100px;
+}
+
+.match_history {
+    background-color: blue;
+    display:flex;
+    flex-direction: column;
+    width: 50vh;
 }

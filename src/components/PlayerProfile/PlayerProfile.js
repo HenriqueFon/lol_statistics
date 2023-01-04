@@ -6,14 +6,28 @@ const PlayerProfile = ({ playerData }) => {
     const {accountId, id, name, profileIconId, summonerLevel} = playerData;
     
     return (
-        <div className = "summoner_column">
-            <div className = "icon">
-                <img src = {`${Data('summoner_Icon', '', '', '', '')}${profileIconId}.png`} alt = 'Profile_icon'></img>
+        <div className = "summoner_info">
+            <div className = "summoner_column">
+                <div className = "icon">
+                    <img src = {`${Data('summoner_Icon', '', '', '', '')}${profileIconId}.png`} alt = 'Profile_icon'></img>
+                    <h2>{summonerLevel}</h2>
+                </div>
+                <div>
+                    <p>{summonerLevel}</p>
+                </div>
+                <div>
+                    <h1>{name}</h1>
+                </div>
             </div>
-            <div>
-                <h1>{name}</h1>
+            <div className = "match_history">
+                <div className = "icon">
+                    <img src = {`${Data('summoner_Icon', '', '', '', '')}${profileIconId}.png`} alt = 'Profile_icon'></img>
+                </div>
+                <div>
+                    <h1>{name}</h1>
+                </div>
+                <p>{summonerLevel}</p>
             </div>
-            <p>Level:{summonerLevel}</p>
         </div>
     );
 }
