@@ -1,19 +1,21 @@
 import "./PlayerProfileColumn.css";
 import Data from "../../../Data/Data";
+import Rank_display from "./Rank_display/Rank_display";
 
-const PlayerProfileColumn = ({name, profileIconId, summonerLevel}) => {
+const PlayerProfileColumn = ({name, profileIconId, summonerLevel, id}) => {
+    
     return (
         <div className = "summoner_column">
                 <div className = "icon">
                     <img src = {`${Data('summoner_Icon', '', '', '', '')}${profileIconId}.png`} alt = 'Profile_icon'></img>
-                    <h2>{summonerLevel}</h2>
                 </div>
-                <div>
-                    <p>{summonerLevel}</p>
+                <div className = "summoner_level">
+                    {summonerLevel}
                 </div>
-                <div>
+                <div className = "summoner_name">
                     <h1>{name}</h1>
                 </div>
+                <Rank_display summoner_id = {id}/>
             </div>
     )
 }

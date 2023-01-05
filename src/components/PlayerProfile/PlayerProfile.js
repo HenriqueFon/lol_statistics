@@ -1,9 +1,9 @@
 import "./PlayerProfile.css";
 import Data from "../../Data/Data";
 import PlayerProfileColumn from "./PlayerProfileColumn/PlayerProfileColumn";
+import MatchHistory from "./MatchHistory/MatchHistory";
 
 const PlayerProfile = ({ playerData }) => {
-
     const {accountId, id, name, profileIconId, summonerLevel} = playerData;
     
     return (
@@ -11,16 +11,12 @@ const PlayerProfile = ({ playerData }) => {
             <PlayerProfileColumn name = {name} 
                                  profileIconId = {profileIconId}
                                  summonerLevel = {summonerLevel}
+                                 id = {id}
             />
-            <div className = "match_history">
-                <div className = "icon">
-                    <img src = {`${Data('summoner_Icon', '', '', '', '')}${profileIconId}.png`} alt = 'Profile_icon'></img>
-                </div>
-                <div>
-                    <h1>{name}</h1>
-                </div>
-                <p>{summonerLevel}</p>
-            </div>
+            <MatchHistory name = {name} 
+                                 profileIconId = {profileIconId}
+                                 summonerLevel = {summonerLevel}
+            />
         </div>
     );
 }
