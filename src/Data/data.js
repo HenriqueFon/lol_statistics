@@ -1,6 +1,6 @@
 const Data = (type, name, filter, puuid, match_id, summoner_id) => {
     const BASE_URL = "https://br1.api.riotgames.com/lol/";
-    const MATCHES_URL = "https://americas.api.riotgames.com/lol";
+    const MATCHES_URL = "https://americas.api.riotgames.com/lol/";
     const ASSETS_URL = "http://ddragon.leagueoflegends.com/cdn/img/";
     const STATS_URL = "http://ddragon.leagueoflegends.com/cdn/12.23.1/data/en_US/";
     const API_KEY = 'RGAPI-b44be1c1-c1d2-4ca4-b9eb-940cb463a20e';
@@ -47,7 +47,7 @@ const Data = (type, name, filter, puuid, match_id, summoner_id) => {
     }
 
     if(type == 'match_id') {
-        return `${MATCHES_URL}match/v5/matches/by-puuid/${puuid}/ids?start=0&count=20&api_key=${API_KEY}`
+        return `${MATCHES_URL}match/v5/matches/by-puuid/${puuid}/ids?start=0&count=10&api_key=${API_KEY}`
     }
 
     if(type == 'match_history') {

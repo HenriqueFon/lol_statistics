@@ -4,7 +4,7 @@ import PlayerProfileColumn from "./PlayerProfileColumn/PlayerProfileColumn";
 import MatchHistory from "./MatchHistory/MatchHistory";
 
 const PlayerProfile = ({ playerData }) => {
-    const {accountId, id, name, profileIconId, summonerLevel} = playerData;
+    const {accountId, id, name, profileIconId, summonerLevel, puuid} = playerData;
     
     return (
         <div className = "summoner_info">
@@ -16,6 +16,7 @@ const PlayerProfile = ({ playerData }) => {
             <MatchHistory name = {name} 
                                  profileIconId = {profileIconId}
                                  summonerLevel = {summonerLevel}
+                                 puuid = {puuid}
             />
         </div>
     );

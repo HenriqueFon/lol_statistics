@@ -34,7 +34,6 @@ const Rank_display = ({summoner_id}) => {
 
     const getPlayerRankData = async (summoner_id) => {
         let res = await FetchRewardsAxios('player_rank','', '', '', '', summoner_id);
-        console.log(res);
         if(res.length == 1) {
             organizeDataSolo(res);
         } else  {
@@ -45,9 +44,6 @@ const Rank_display = ({summoner_id}) => {
     useEffect(() => {
          getPlayerRankData(summoner_id);
     },[])
-
-    console.log(rankedFlex);
-    console.log(rankedSolo);
     
     return (
         <div>
