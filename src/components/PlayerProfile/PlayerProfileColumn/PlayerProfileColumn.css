@@ -1,7 +1,10 @@
 .summoner_column {
     display:flex;
     flex-direction: column;
-    background-color: red;
+}
+
+.summoner_apr {
+    background-color: #424254;
     border-radius: 25px;
 }
 

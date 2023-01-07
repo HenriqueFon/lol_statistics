@@ -1,0 +1,25 @@
+.ranked_box {
+    height: 50%;
+}
+
+.ranked_card  {
+    background-color: #424254;
+    border-radius: 10px;
+}
+
+.ranked_card h2 {
+    background-color: #424254;
+    border-radius: 10px;
+    font-size: 1.7vh;
+}
+
+.ranked_card img {
+    width: 20%;
+    height: 20%;
+}
+
+.win_loss {
+    display: flex;
+    justify-content: space-around;
+    gap: -50px;
+}

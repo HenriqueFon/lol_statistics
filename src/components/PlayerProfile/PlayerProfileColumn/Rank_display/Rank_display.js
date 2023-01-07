@@ -1,6 +1,6 @@
-import './Rank_display.css';
 import {useState, useEffect} from "react";
 import { FetchRewardsAxios } from "../../../../API/FetchRewardsAxios";
+import Rank_display_cards from "./Rank_display_cards/Rank_display_cards";
 
 const Rank_display = ({summoner_id}) => {
 
@@ -49,20 +49,21 @@ const Rank_display = ({summoner_id}) => {
     console.log(rankedFlex);
     console.log(rankedSolo);
     
-    // const {leaguePoints, losses, queueType, rank, tier, wins} = playerRank[0];
-    // console.log(queueType)
     return (
-        <div></div>
-        // <div className = 'ranked_box'>
-        //     <div className = 'solo'>
-        //         <h2>{queueType}</h2>
-        //         <p>{tier}</p>
-        //     </div>
-        //     <div className = 'flex'>
-        //         <h2>{queueType}</h2>
-        //         <p>{tier}</p>
-        //     </div>
-        // </div>
+        <div>
+            { rankedSolo && <Rank_display_cards queue = 'Ranqueada Solo'
+                                tier = {rankedSolo.tier}
+                                leaguePoints = {rankedSolo.leaguePoints}
+                                wins = {rankedSolo.wins}
+                                losses = {rankedSolo.losses} />
+            }
+            { rankedFlex && <Rank_display_cards queue = 'Ranqueada Flexível'
+                                tier = {rankedFlex.tier}
+                                leaguePoints = {rankedFlex.leaguePoints}
+                                wins = {rankedFlex.wins}
+                                losses = {rankedFlex.losses} />
+            }
+        </div>
     )
 }
 

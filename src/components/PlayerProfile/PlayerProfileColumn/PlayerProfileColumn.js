@@ -6,6 +6,7 @@ const PlayerProfileColumn = ({name, profileIconId, summonerLevel, id}) => {
     
     return (
         <div className = "summoner_column">
+            <div className = "summoner_apr">
                 <div className = "icon">
                     <img src = {`${Data('summoner_Icon', '', '', '', '')}${profileIconId}.png`} alt = 'Profile_icon'></img>
                 </div>
@@ -15,8 +16,9 @@ const PlayerProfileColumn = ({name, profileIconId, summonerLevel, id}) => {
                 <div className = "summoner_name">
                     <h1>{name}</h1>
                 </div>
-                <Rank_display summoner_id = {id}/>
             </div>
+            <Rank_display summoner_id = {id}/>
+        </div>
     )
 }
 
