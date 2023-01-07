@@ -8,12 +8,25 @@
 }
 
 .ranked_card h2 {
+    display:flex;
     background-color: #424254;
     border-radius: 10px;
     font-size: 1.7vh;
+    padding-left:1vh;
+}
+
+.ranked_tier {
+    margin-top:-1vh;
+    display: inline-flex;
+    padding-left:1vh;
+}
+
+.ranked_tier p{
+    padding-left:1vh;
 }
 
 .ranked_card img {
+    display:flex;
     width: 35%;
     height: 35%;
 }
@@ -22,4 +35,5 @@
     display: flex;
     justify-content: space-around;
     gap: -50px;
+    margin-top: -2vh;
 }
