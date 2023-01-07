@@ -1,6 +1,7 @@
 .summoner_column {
     display:flex;
     flex-direction: column;
+    width: 25vh;
 }
 
 .summoner_apr {
@@ -17,7 +18,7 @@
     font-size:1.5vh;
     width:4vh;
     position:relative;
-    left:14vh;
+    left:10.5vh;
     bottom: 2vh;
 }
 
