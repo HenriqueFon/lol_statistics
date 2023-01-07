@@ -53,8 +53,8 @@ const Rank_display_cards = ({queue,tier, leaguePoints, wins, losses }) => {
                 <div className = 'ranked_tier'>
                     <img src = {rankImage(tier)} alt = 'Elo image'></img>
                     <div>
-                        <p>{tier}</p>
-                        <p>{leaguePoints}</p>
+                        <p className = 'tier'>{tier}</p>
+                        <p className = 'points'>{leaguePoints}</p>
                     </div>
                 </div>
                 <div className = 'win_loss'>

@@ -4,7 +4,7 @@
 
 .ranked_card  {
     background-color: #424254;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .ranked_card h2 {
@@ -23,6 +23,15 @@
 
 .ranked_tier p{
     padding-left:1vh;
+}
+
+.tier {
+    margin-top: 4vh;
+}
+
+.points {
+    position: relative;
+    bottom: 1.5vh;
 }
 
 .ranked_card img {
