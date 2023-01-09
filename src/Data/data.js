@@ -3,7 +3,7 @@ const Data = (type, name, filter, puuid, match_id, summoner_id) => {
     const MATCHES_URL = "https://americas.api.riotgames.com/lol/";
     const ASSETS_URL = "http://ddragon.leagueoflegends.com/cdn/img/";
     const STATS_URL = "http://ddragon.leagueoflegends.com/cdn/12.23.1/data/en_US/";
-    const API_KEY = 'RGAPI-b44be1c1-c1d2-4ca4-b9eb-940cb463a20e';
+    const API_KEY = 'RGAPI-5191181a-1fb2-4de4-a9de-5bd4dad1718f';
 
 
     if(type == 'encrypt') {
