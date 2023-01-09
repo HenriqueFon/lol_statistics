@@ -47,7 +47,11 @@ const Data = (type, name, filter, puuid, match_id, summoner_id) => {
     }
 
     if(type == 'items') {
-        return `${ASSETS_URL}item.json`;
+        return `http://ddragon.leagueoflegends.com/cdn/12.23.1/img/item/`;
+    }
+
+    if(type == 'summoners_spells') {
+        return `http://ddragon.leagueoflegends.com/cdn/12.23.1/img/spell/`;
     }
 
     if(type == 'match_id') {

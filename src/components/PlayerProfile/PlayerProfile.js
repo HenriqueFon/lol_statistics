@@ -13,6 +13,7 @@ const PlayerProfile = ({ playerData }) => {
                                  summonerLevel = {summonerLevel}
                                  id = {id}
             />
+            
             <MatchHistory name = {name} 
                                  profileIconId = {profileIconId}
                                  summonerLevel = {summonerLevel}

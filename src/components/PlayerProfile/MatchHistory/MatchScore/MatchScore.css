@@ -1,6 +1,32 @@
-.champion_icon img{
+.score {
+
+}
+
+.champion_icon {
+    width: 25%;
+}
+
+.champion_icon img {
     display:flex;
     justify-content: flex-start;
-    width: 25%;
-    border-radius: 600px;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.champion_level {
+    display:flex;
+    justify-content: flex-start;
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+    font-size: 1.5vh;
+    width:2vh;
+    text-align: center;
+    position: relative;
+    margin-left: 10.2vh;
+    bottom: 2vh;
+}
+
+.champion_level{
+    
 }

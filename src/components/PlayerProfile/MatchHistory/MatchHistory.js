@@ -94,7 +94,7 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
     return (
         <div className = "match_history">
                <MatchScore player = {player}/>
-            </div>
+        </div>
     );
 }
 

@@ -13,9 +13,9 @@
 }
 
 .match_history {
-    background-color: blue;
-    display:flex;
+    background-color: red;
+    display: flex;
     flex-direction: column;
-    border-radius: 34px;
+    border-radius: 25px;
     width: 50vh;
 } 
