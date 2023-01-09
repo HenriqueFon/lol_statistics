@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import Data from "../../../../Data/Data";
-import Summoner_index from "../../../../Data/Summoner_index"
-import './MatchScore.css';
+import './MatchScore.css'
+import { Summoner_index } from '../../../../Data/Summoner_index';
+import Data from '../../../../Data/Data';
 
 const MatchScore = ({player}) => {
     
@@ -26,10 +25,16 @@ const MatchScore = ({player}) => {
     } = player;
     
     const getSummonerImage = (id) => {
-        let summonerName = Summoner_index(id);
         let url = Data('summoners_spells', '', '', '', '', '');
+        let summonerName = Summoner_index(id);
+        return `${url}${summonerName}.png`;
     }
 
+    const getSummonerItem = (id) => {
+        let url = Data('items', '', '', '', '', '');
+        return `${url}${id}.png`;
+    }
+    
     return (
         <div>
             <div className = 'score'>
@@ -37,17 +42,21 @@ const MatchScore = ({player}) => {
                     <img src = {championIcon} alt = {championName} />
                 </div>
                 <div className = 'champion_level'>{champLevel}</div>
-                <div className = 'champion_summoners_spells_1'>{summoner1Id}</div>
-                <div className = 'champion_summoners_spells_2'>{summoner2Id}</div>
+                <div className = 'champion_summoners_spells_1'>
+                    <img src = {getSummonerImage(summoner1Id)} alt = {summoner1Id} />
+                </div>
+                <div className = 'champion_summoners_spells_2'>
+                <img src = {getSummonerImage(summoner2Id)} alt = {summoner2Id} />
+                </div>
                 <div className = 'champion_score'>{kills}/{deaths}/{assists}</div>
                 <div className = 'champion_itens'>
-                   <div>{item0}</div>
-                   <div>{item1}</div>
-                   <div>{item2}</div>
-                   <div>{item3}</div>
-                   <div>{item4}</div>
-                   <div>{item5}</div>
-                   <div>{item6}</div>
+                   <div><img src = {getSummonerItem(item0)} alt = {item0} /></div>
+                   <div><img src = {getSummonerItem(item1)} alt = {item1} /></div>
+                   <div><img src = {getSummonerItem(item2)} alt = {item2} /></div>
+                   <div><img src = {getSummonerItem(item3)} alt = {item3} /></div>
+                   <div><img src = {getSummonerItem(item4)} alt = {item4} /></div>
+                   <div><img src = {getSummonerItem(item5)} alt = {item5} /></div>
+                   <div><img src = {getSummonerItem(item6)} alt = {item6} /></div>
                 </div>
             </div>
         </div>

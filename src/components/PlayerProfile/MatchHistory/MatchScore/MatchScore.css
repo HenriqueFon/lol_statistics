@@ -27,6 +27,7 @@
     bottom: 2vh;
 }
 
-.champion_level{
-    
+.champion_itens {
+    display:flex;
+    padding:1vh;
 }
