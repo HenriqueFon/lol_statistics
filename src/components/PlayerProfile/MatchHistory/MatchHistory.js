@@ -1,4 +1,4 @@
-import Data from "../../../Data/Data";
+import './MatchHistory.css';
 import { FetchRewardsAxios } from "../../../API/FetchRewardsAxios";
 import { useState ,useEffect } from "react";
 import MatchScore from "./MatchScore/MatchScore";
@@ -55,7 +55,8 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
         setHistory(data);
         setPlayersInMatch(data[0].info.participants);
         let playerData = data[0].info.participants.filter(element => element.summonerName == name);
-        playerObject(playerData);
+        let object = playerObject(playerData);
+        setPlayer(object);
     }
 
     const getMatchId = async () => {
@@ -73,10 +74,10 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
     useEffect(() => {
         getMatchId();
     }, [])
-    
+    console.log(player)
     return (
         <div className = "match_history">
-               <MatchScore />
+               <MatchScore player = {player}/>
             </div>
     );
 }

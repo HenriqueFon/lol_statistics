@@ -3,7 +3,7 @@ const Data = (type, name, filter, puuid, match_id, summoner_id) => {
     const MATCHES_URL = "https://americas.api.riotgames.com/lol/";
     const ASSETS_URL = "http://ddragon.leagueoflegends.com/cdn/img/";
     const STATS_URL = "http://ddragon.leagueoflegends.com/cdn/12.23.1/data/en_US/";
-    const API_KEY = 'RGAPI-5191181a-1fb2-4de4-a9de-5bd4dad1718f';
+    const API_KEY = 'RGAPI-21b9c92b-7ddb-49f3-a381-801e8e7dc10b';
 
 
     if(type == 'encrypt') {
@@ -28,6 +28,10 @@ const Data = (type, name, filter, puuid, match_id, summoner_id) => {
 
     if(type == 'champion_splash') {
         return `${ASSETS_URL}champion/splash/`;
+    }
+
+    if(type == 'champion_icon') {
+        return `https://ddragon.leagueoflegends.com/cdn/12.23.1/img/champion/`;
     }
 
     if(type == 'free_rotation') {
