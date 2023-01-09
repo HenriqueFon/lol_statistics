@@ -1,4 +1,5 @@
 import './MatchHistory.css';
+import Data from '../../../Data/Data';
 import { FetchRewardsAxios } from "../../../API/FetchRewardsAxios";
 import { useState ,useEffect } from "react";
 import MatchScore from "./MatchScore/MatchScore";
@@ -9,11 +10,12 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
     const [history, setHistory] = useState([]);
     const [playersInMatch, setPlayersInMatch] = useState([]);
     const [player, setPlayer] = useState([]);
-    
+    let image = '';
+
     const playerObject = (playerData) => {
         const {
-            assists, 
-            champExperience, 
+            assists,  
+            champLevel,
             championName,
             deaths, 
             win,
@@ -30,10 +32,15 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
             summoner2Id
         } = playerData[0];
 
+        let imageData = getChampionIcon(championName);
+        imageData
+        .then(resolve => image = resolve)
+
         const data = {
             assists: assists,
-            champExperience: champExperience,
+            champLevel: champLevel,
             championName: championName,
+            championIcon: image, 
             deaths: deaths,
             win: win, 
             kills: kills,
@@ -69,6 +76,15 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
     const getMatchHistory = async (matchIds) => {
         const matchHistory =  await matchIds.map(element => FetchRewardsAxios('match_history', '', '', '', element, ''));
         return matchHistory;
+    }
+
+    const mountImage = (championName) => {
+        return `${Data('champion_splash','','','','','')}${championName}_0.jpg`;
+    }
+
+    const getChampionIcon = async(championName) => {
+        let icon = await mountImage(championName);
+        return icon;
     }
 
     useEffect(() => {
