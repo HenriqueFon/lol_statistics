@@ -62,6 +62,7 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
         setHistory(data);
         setPlayersInMatch(data[0].info.participants);
         let playerData = data[0].info.participants.filter(element => element.summonerName == name);
+        console.log(playerData)
         let object = playerObject(playerData);
         setPlayer(object);
     }
@@ -90,7 +91,8 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
     useEffect(() => {
         getMatchId();
     }, [])
-    console.log(player)
+    console.log(player);
+    console.log(history)
     return (
         <div className = "match_history">
                <MatchScore player = {player}/>
