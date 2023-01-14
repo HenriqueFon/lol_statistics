@@ -8,7 +8,7 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
     
     let matchIds = [];
     const [history, setHistory] = useState([]);
-    const [playersInMatch, setPlayersInMatch] = useState([]);
+    const [playerInMatch, setPlayerInMatch] = useState([]);
     const [player, setPlayer] = useState([]);
     let image = '';
 
@@ -60,9 +60,21 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
 
     const getMatchDataFiltered = (data, dadosUser) => {
         setHistory(data);
-        setPlayersInMatch(data[0].info.participants);
+
+        let matches = data.map(element => element.info.participants);
+        
+        for (let match of matches) {
+            for (let player of match) {
+                if(player.summonerName == 'Haisee') {
+                    setPlayerInMatch(previousMatch => [...previousMatch, player])
+                }
+            }
+        }
+        
+        let playerMatches = matches.map(element => console.log(element.championName));
+        console.log(setPlayerInMatch)
         let playerData = data[0].info.participants.filter(element => element.summonerName == name);
-        console.log(playerData)
+
         let object = playerObject(playerData);
         setPlayer(object);
     }
@@ -91,8 +103,7 @@ const MatchHistory = ({name, profileIconId, summonerLevel, puuid}) => {
     useEffect(() => {
         getMatchId();
     }, [])
-    console.log(player);
-    console.log(history)
+    
     return (
         <div className = "match_history">
                <MatchScore player = {player}/>
